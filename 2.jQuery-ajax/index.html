@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <style>
+            h1{
+                padding-top : 50px;
+                padding-left: 50px;
+            }
+            .container{
+                padding-left: 50px;
+                padding-top: 10px;
+            }
+            .btn{
+                padding-left: 5px;
+            }
+        </style>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+        <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <h2>jQuery-Ajax</h2>
+            <button type='button' class='btn btn-primary'>GET</button>
+            <button type='button' class='btn btn-danger'>POST</button>
+            <button type='button' class='btn btn-secondary'>通用型方法</button>
+        </div>
+        
+        <script>
+            $('button').eq(0).click(function(){
+                $.get('http://127.0.0.1:3000/jquery-server', {a: 100, b:200}, function(data){
+                    console.log(data);
+                })
+            })
+        </script>
+    </body>
+</html>
